@@ -106,6 +106,10 @@ class Html5 extends Tech {
     this.proxyWebkitFullscreen_();
 
     this.triggerReady();
+
+    if (this.hasStartedPlayback_ && this.paused()) {
+      this.play();
+    }
   }
 
   /**
@@ -329,6 +333,7 @@ class Html5 extends Tech {
       }
     }
 
+    this.hasStartedPlayback_ = el.paused;
     return el;
   }
 
