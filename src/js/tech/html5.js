@@ -333,7 +333,7 @@ class Html5 extends Tech {
       }
     }
 
-    this.hasStartedPlayback_ = el.paused;
+    this.hasStartedPlayback_ = !el.paused;
     return el;
   }
 
